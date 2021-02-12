@@ -73,6 +73,7 @@ const app = () => {
 
   function flipCards() {
     selectedCardsByUser.length = 0;
+    playBtn.textContent = "Play";
     [...card].forEach((ele) => {
       ele.addEventListener("click", flipCardBack);
       addClass(ele, "rotate");
@@ -83,7 +84,21 @@ const app = () => {
     const element = e.target.parentElement;
     const number = parseInt(element.getAttribute("data-number"));
     removeClass(element, "rotate");
+
     selectedCardsByUser.push(number);
+
+    allCards.sort((a, b) => a - b);
+
+    element.removeEventListener("click", flipCardBack);
+
+    if (selectedCardsByUser.indexOf(number) === allCards.indexOf(number)) {
+      element.firstElementChild.classList.remove("bg-danger");
+      addClass(element.firstElementChild, "bg-success");
+    } else {
+      element.firstElementChild.classList.remove("bg-success");
+      addClass(element.firstElementChild, "bg-danger");
+      playBtn.textContent = "Try Again";
+    }
   }
 
   function addClass(ele, className) {
