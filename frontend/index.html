@@ -14,19 +14,12 @@
     <title>Memory Game</title>
   </head>
   <body>
-    <div class="myContainer">
-      <div class="theCard">
-        <div class="front">front</div>
-        <div class="back">back</div>
-      </div>
-    </div>
-
-    <div class="container-xxl p-0 text-center border border-primary">
+    <div class="container-xxl p-0 text-center">
       <h1 class="w-100 py-3">Memory Game</h1>
 
       <!--Select Card Container -->
       <div
-        class="container my-5 mx-auto text-start d-block border border-secondary"
+        class="container my-5 mx-auto text-start d-block"
         id="select-cards_container"
       >
         <div class="card m-2 mx-auto">
@@ -49,7 +42,7 @@
 
       <!-- Cards Container -->
       <div
-        class="container my-5 mx-auto text-start pt-2 d-none border border-warning"
+        class="container my-5 mx-auto text-start pt-2 d-none"
         id="cards-container"
       >
         <div class="row">
@@ -65,11 +58,7 @@
           </div>
         </div>
 
-        <div
-          class="row mx-auto border border-danger py-2"
-          id="cards"
-          style="width: 101%"
-        ></div>
+        <div class="row mx-auto py-2" id="cards"></div>
 
         <button class="btn btn-primary m-3" id="play-btn">Play</button>
       </div>

@@ -1,27 +1,73 @@
-.one-card {
+.mycard-container {
   height: 200px;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1200px) {
-  .one-card {
+.mycard {
+  background-color: red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: blue;
+}
+
+.front {
+  background-color: #bbb;
+  color: black;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 1200px) {
+  .mycard-container {
     height: 200px;
   }
 }
 
-@media only screen and (max-width: 992px) {
-  .one-card {
+@media (max-width: 992px) {
+  .mycard-container {
     height: 150px;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .one-card {
+@media (min-width: 992px) {
+  .front {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mycard-container {
     height: 100px;
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .one-card {
+@media (max-width: 576px) {
+  .mycard-container {
     height: 230px;
   }
 } ;
