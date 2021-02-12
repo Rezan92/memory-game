@@ -6,9 +6,11 @@ const app = () => {
   const cardsContainer = document.querySelector("#cards-container");
   const cards = document.querySelector("#cards");
   const playBtn = document.querySelector("#play-btn");
+  const moreCardsBtn = document.querySelector("#more-cards");
 
   selectCards.addEventListener("change", validateBtn);
   startBtn.addEventListener("click", displayData);
+  moreCardsBtn.addEventListener("click", goBack);
 
   //If the value is not a valid number the button will be disabled
   function validateBtn() {
@@ -47,6 +49,13 @@ const app = () => {
         <div class="col-12 p-1 border border-primary">${element}</div>
       </div>`;
     });
+  }
+
+  function goBack() {
+    removeClass(selectCardsContainer, "d-none");
+    addClass(selectCardsContainer, "d-block");
+    addClass(cardsContainer, "d-none");
+    removeClass(cardsContainer, "d-block");
   }
 
   function addClass(ele, className) {
