@@ -18,23 +18,21 @@
 
       <!--Select Card Container -->
       <div
-        class="container my-5 mx-auto text-start border border-secondary"
-        id="select-container"
+        class="container my-5 mx-auto text-start d-block border border-secondary"
+        id="select-cards_container"
       >
         <div class="card m-2 mx-auto">
           <div class="card-body">
             <h5 class="card-title">Select number of cards</h5>
             <div class="form-group">
-              <select class="form-control w-25" id="number-cards">
-                <option value="" disabled selected hidden>
-                  --Select your option--
-                </option>
+              <select class="form-control w-25" id="select-cards_num">
+                <option value="">--Select your option--</option>
                 <option value="4">4</option>
                 <option value="8">8</option>
                 <option value="12">12</option>
               </select>
             </div>
-            <button class="btn mt-3 btn-primary" id="start-btn">
+            <button class="btn mt-3 btn-primary disabled" id="start-btn">
               Start The Game
             </button>
           </div>
@@ -43,20 +41,28 @@
 
       <!-- Cards Container -->
       <div
-        class="container my-5 mx-auto text-start pt-2 border border-warning"
+        class="container my-5 mx-auto text-start pt-2 d-none border border-warning"
         id="cards-container"
       >
-        <p class="mb-1">
-          Memories the numbers on the cards, and click Play button when you are
-          ready.
-        </p>
-        <p>After you click play the cards will flip</p>
+        <div class="row">
+          <div class="col-9">
+            <p class="mb-1">
+              Memories the numbers on the cards, and click Play button when you
+              are ready.
+            </p>
+            <p>After you click play the cards will flip</p>
+          </div>
+          <div class="col-3 text-end" id="more-cards">
+            <button class="btn btn-dark text-white">More Cards</button>
+          </div>
+        </div>
+
         <div
           class="row justify-content-around mx-auto border border-danger p-2"
           id="cards"
           style="width: 101%"
         >
-          <div class="col-6 col-sm-3 my-2">
+          <!-- <div class="col-6 col-sm-3 my-2">
             <div class="col-12 p-1 border border-primary">col-1</div>
           </div>
 
@@ -101,11 +107,13 @@
 
           <div class="col-6 col-sm-3 my-2">
             <div class="col-12 p-1 border border-primary">col-12</div>
-          </div>
+          </div> -->
         </div>
 
         <button class="btn btn-primary m-3" id="play-btn">Play</button>
       </div>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
