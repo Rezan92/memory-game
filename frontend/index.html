@@ -48,10 +48,10 @@
         <div class="row">
           <div class="col-9">
             <p class="mb-1">
-              Memorize the numbers on the cards, and click the Play button when
-              you are ready.
+              -Memorize the cards, and click the Play button when you are ready.
             </p>
-            <p>After you click Play the cards will flip.</p>
+            <p class="mb-1">-After you click Play the cards will flip.</p>
+            <p>-Try to pick the cards in ascending order.</p>
           </div>
           <div class="col-3 text-end" id="more-cards">
             <button class="btn btn-dark text-white">More Cards</button>
@@ -59,7 +59,12 @@
         </div>
 
         <div class="row mx-auto py-2" id="cards"></div>
-
+        <div class="alert alert-success d-none" role="alert" id="winner">
+          Congratulations! You won the game :)
+        </div>
+        <div class="alert alert-danger d-none" role="alert" id="loser">
+          The order is incorrect. Try again.
+        </div>
         <button class="btn btn-primary m-3" id="play-btn">Play</button>
       </div>
     </div>

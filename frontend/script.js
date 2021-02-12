@@ -9,6 +9,8 @@ const app = () => {
   const card = document.getElementsByClassName("mycard");
   const playBtn = document.querySelector("#play-btn");
   const moreCardsBtn = document.querySelector("#more-cards");
+  const winnerAlert = document.querySelector("#winner");
+  const loserAlert = document.querySelector("#loser");
 
   const selectedCardsByUser = [];
   const allCards = [];
@@ -52,7 +54,7 @@ const app = () => {
             <div class="col-10 mx-auto mycard-container">
               <div class="mycard" data-number=${num}>
                 <h3 class="front">${num}</h3>
-                <div class="back">back</div>
+                <div class="back"></div>
               </div>
             </div>
           </div>`;
@@ -62,6 +64,11 @@ const app = () => {
     removeClass(selectCardsContainer, "d-block");
     removeClass(cardsContainer, "d-none");
     addClass(cardsContainer, "d-block");
+
+    removeClass(winnerAlert, "d-block");
+    addClass(winnerAlert, "d-none");
+    removeClass(loserAlert, "d-block");
+    addClass(loserAlert, "d-none");
   }
 
   function goBack() {
@@ -74,6 +81,12 @@ const app = () => {
   function flipCards() {
     selectedCardsByUser.length = 0;
     playBtn.textContent = "Play";
+
+    removeClass(winnerAlert, "d-block");
+    addClass(winnerAlert, "d-none");
+    removeClass(loserAlert, "d-block");
+    addClass(loserAlert, "d-none");
+
     [...card].forEach((ele) => {
       ele.addEventListener("click", flipCardBack);
       addClass(ele, "rotate");
@@ -98,6 +111,18 @@ const app = () => {
       element.firstElementChild.classList.remove("bg-success");
       addClass(element.firstElementChild, "bg-danger");
       playBtn.textContent = "Try Again";
+    }
+
+    if (selectedCardsByUser.length === allCards.length) {
+      const a = selectedCardsByUser.filter((num, i) => num === allCards[i]);
+
+      if (a.length === allCards.length) {
+        removeClass(winnerAlert, "d-none");
+        addClass(winnerAlert, "d-block");
+      } else {
+        removeClass(loserAlert, "d-none");
+        addClass(loserAlert, "d-block");
+      }
     }
   }
 
