@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="container-xxl p-0 text-center border border-primary">
+      <h1 class="w-100 py-3">Memory Game</h1>
+
+      <!--Select Card Container -->
+      <div
+        class="container my-5 mx-auto text-start border border-secondary"
+        id="select-container"
+      >
+        <div class="card m-2 mx-auto">
+          <div class="card-body">
+            <h5 class="card-title">Select number of cards</h5>
+            <div class="form-group">
+              <select class="form-control w-25" id="number-cards">
+                <option value="" disabled selected hidden>
+                  --Select your option--
+                </option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <button class="btn mt-3 btn-primary" id="start-btn">
+              Start The Game
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards Container -->
+      <div
+        class="container my-5 mx-auto text-start pt-2 border border-warning"
+        id="cards-container"
+      >
+        <p class="mb-1">
+          Memories the numbers on the cards, and click Play button when you are
+          ready.
+        </p>
+        <p>After you click play the cards will flip</p>
+        <div
+          class="row justify-content-around mx-auto border border-danger p-2"
+          id="cards"
+          style="width: 101%"
+        >
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-1</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-2</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-3</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-4</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-5</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-6</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-7</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-8</div>
+          </div>
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-9</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-10</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-11</div>
+          </div>
+
+          <div class="col-6 col-sm-3 my-2">
+            <div class="col-12 p-1 border border-primary">col-12</div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary m-3" id="play-btn">Play</button>
+      </div>
+    </div>
+  </body>
+</html>
