@@ -46,6 +46,8 @@ const app = () => {
     });
     const content = await response.json();
 
+    allCards.length = 0;
+
     content.forEach((num) => {
       allCards.push(num);
 
@@ -69,6 +71,8 @@ const app = () => {
     addClass(winnerAlert, "d-none");
     removeClass(loserAlert, "d-block");
     addClass(loserAlert, "d-none");
+
+    playBtn.textContent = "Play";
   }
 
   function goBack() {

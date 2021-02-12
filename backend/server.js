@@ -1,3 +1,4 @@
+import path from "path";
 import express from "express";
 import randomNumRoutes from "./routes/randomNumRoutes.js";
 
@@ -7,8 +8,11 @@ app.use(express.json());
 
 app.use("/random", randomNumRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Hey, Server is running :)");
-});
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname + "/frontend")));
+
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "frontend", "index.html"))
+);
 
 app.listen(5000, () => console.log("App is listening on port 5000"));
