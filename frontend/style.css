@@ -1,0 +1,27 @@
+.one-card {
+  height: 200px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .one-card {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .one-card {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .one-card {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .one-card {
+    height: 230px;
+  }
+} ;

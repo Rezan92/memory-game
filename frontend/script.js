@@ -28,11 +28,6 @@ const app = () => {
 
     cards.innerHTML = "";
 
-    addClass(selectCardsContainer, "d-none");
-    removeClass(selectCardsContainer, "d-block");
-    removeClass(cardsContainer, "d-none");
-    addClass(cardsContainer, "d-block");
-
     const response = await fetch(URL, {
       method: "POST",
       headers: {
@@ -49,6 +44,11 @@ const app = () => {
         <div class="col-12 p-1 border border-primary">${element}</div>
       </div>`;
     });
+
+    addClass(selectCardsContainer, "d-none");
+    removeClass(selectCardsContainer, "d-block");
+    removeClass(cardsContainer, "d-none");
+    addClass(cardsContainer, "d-block");
   }
 
   function goBack() {

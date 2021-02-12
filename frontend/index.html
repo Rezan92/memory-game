@@ -10,9 +10,17 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Memory Game</title>
   </head>
   <body>
+    <div class="myContainer">
+      <div class="theCard">
+        <div class="front">front</div>
+        <div class="back">back</div>
+      </div>
+    </div>
+
     <div class="container-xxl p-0 text-center border border-primary">
       <h1 class="w-100 py-3">Memory Game</h1>
 
@@ -58,57 +66,10 @@
         </div>
 
         <div
-          class="row justify-content-around mx-auto border border-danger p-2"
+          class="row mx-auto border border-danger py-2"
           id="cards"
           style="width: 101%"
-        >
-          <!-- <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-1</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-2</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-3</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-4</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-5</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-6</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-7</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-8</div>
-          </div>
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-9</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-10</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-11</div>
-          </div>
-
-          <div class="col-6 col-sm-3 my-2">
-            <div class="col-12 p-1 border border-primary">col-12</div>
-          </div> -->
-        </div>
+        ></div>
 
         <button class="btn btn-primary m-3" id="play-btn">Play</button>
       </div>
