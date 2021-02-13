@@ -12,8 +12,12 @@ This app created using HTML, CSS, and Js.
 git clone git@github.com:Rezan92/memory-game.git
 cd memory-game
 npm install
-npm run server
 ```
+##Running the App
+
+1. Make sure that you are in the **memory-game** folder
+2. In your Terminal run ```npm run server```.
+3. Navigate to [http://localhost:5000/](http://localhost:5000/) in your browser.
 
 ## Author
 
