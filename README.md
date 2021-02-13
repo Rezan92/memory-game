@@ -13,7 +13,7 @@ git clone git@github.com:Rezan92/memory-game.git
 cd memory-game
 npm install
 ```
-##Running the App
+## Running the App
 
 1. Make sure that you are in the **memory-game** folder
 2. In your Terminal run ```npm run server```.
