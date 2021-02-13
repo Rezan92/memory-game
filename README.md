@@ -2,7 +2,7 @@
 
 ### ✨ [Demo](https://m-g.herokuapp.com/)
 
-<img alt="memory game gif" src="./assets/gif/memory_game.gif" />
+<p align="center"><img alt="memory game gif" src="./assets/gif/memory_game.gif" /></p>
 
 This app created using HTML, CSS, and Js.
 
