@@ -1,5 +1,5 @@
 const app = () => {
-  const URL = "http://localhost:5000/random/numbers";
+  const URL = `http://localhost:${process.env.PORT || 5000}/random/numbers`;
 
   const selectCardsContainer = document.querySelector("#select-cards_container");
   const selectCards = document.querySelector("#select-cards_num");
