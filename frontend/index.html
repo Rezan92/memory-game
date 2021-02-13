@@ -14,16 +14,20 @@
     <title>Memory Game</title>
   </head>
   <body>
-    <div class="container-xxl p-0 text-center">
+    <div class="container-xxl p-0 text-center bg-dark main-container">
       <h1 class="w-100 py-3">Memory Game</h1>
 
       <!--Select Card Container -->
       <div
-        class="container my-5 mx-auto text-start d-block"
+        class="container mt-5 mx-auto text-start d-block"
         id="select-cards_container"
       >
         <div class="card m-2 mx-auto">
           <div class="card-body">
+            <p class="card-text mb-1">Test your memory.</p>
+            <p class="card-text">
+              Choose the number of cards. and click "Start The Game" button
+            </p>
             <h5 class="card-title">Select number of cards</h5>
             <div class="form-group">
               <select class="form-control w-25" id="select-cards_num">
@@ -42,7 +46,7 @@
 
       <!-- Cards Container -->
       <div
-        class="container my-5 mx-auto text-start pt-2 d-none"
+        class="container mt-5 mx-auto text-start pt-2 d-none"
         id="cards-container"
       >
         <div class="row">
@@ -54,7 +58,7 @@
             <p>-Try to pick the cards in ascending order.</p>
           </div>
           <div class="col-3 text-end" id="more-cards">
-            <button class="btn btn-dark text-white">More Cards</button>
+            <button class="btn btn-primary text-white">More Cards</button>
           </div>
         </div>
 
