@@ -1,6 +1,6 @@
 <h1 align="center">Memory Game</h1>
 
-### ✨ [Demo](https://m-g.herokuapp.com/)
+### ✨ [Demo](https://m-g2.herokuapp.com/)
 
 <p align="center"><img alt="memory game gif" src="./assets/gif/memory_game.gif" /></p>
 
