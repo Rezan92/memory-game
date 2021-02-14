@@ -8,6 +8,7 @@ const app = () => {
   const cards = document.querySelector("#cards");
   const card = document.getElementsByClassName("mycard");
   const playBtn = document.querySelector("#play-btn");
+  const playNewGameBtn = document.querySelector("#play-new-game");
   const moreCardsBtn = document.querySelector("#more-cards");
   const winnerAlert = document.querySelector("#winner");
   const loserAlert = document.querySelector("#loser");
@@ -19,6 +20,7 @@ const app = () => {
   startBtn.addEventListener("click", displayData);
   moreCardsBtn.addEventListener("click", goBack);
   playBtn.addEventListener("click", flipCards);
+  playNewGameBtn.addEventListener("click", displayData);
 
   //If the value is not a valid number the button will be disabled
   function validateBtn() {
@@ -74,6 +76,9 @@ const app = () => {
     removeClass(loserAlert, "d-block");
     addClass(loserAlert, "d-none");
 
+    removeClass(playNewGameBtn, "d-inlin-block");
+    addClass(playNewGameBtn, "d-none");
+
     playBtn.textContent = "Play";
   }
 
@@ -92,6 +97,9 @@ const app = () => {
     addClass(winnerAlert, "d-none");
     removeClass(loserAlert, "d-block");
     addClass(loserAlert, "d-none");
+
+    removeClass(playNewGameBtn, "d-inlin-block");
+    addClass(playNewGameBtn, "d-none");
 
     [...card].forEach((ele) => {
       ele.addEventListener("click", flipCardBack);
@@ -114,6 +122,8 @@ const app = () => {
     } else {
       removeClass(element.firstElementChild, "bg-success");
       addClass(element.firstElementChild, "bg-danger");
+      removeClass(playNewGameBtn, "d-none");
+      addClass(playNewGameBtn, "d-inlin-block");
       playBtn.textContent = "Try Again";
     }
 

@@ -14,51 +14,61 @@
     <title>Memory Game</title>
   </head>
   <body>
-    <div class="container-xxl p-0 text-center bg-dark main-container">
-      <h1 class="w-100 py-3">Memory Game</h1>
-
+    <div class="container-xxl p-0 text-center main-container">
+      <nav class="navbar navbar-light bg-light">
+        <img src="./images/logo.png" width="100" alt="" />
+      </nav>
+      <h1 class="text-dark m-3">Lepaya Memory Game</h1>
       <!--Select Card Container -->
       <div
-        class="container mt-5 mx-auto text-start d-block"
+        class="container mycontainer mt-5 mx-auto text-start d-block"
         id="select-cards_container"
       >
-        <div class="card m-2 mx-auto">
-          <div class="card-body">
-            <p class="card-text mb-1">Test your memory.</p>
-            <p class="card-text">
-              Choose the number of cards. and click "Start The Game" button
-            </p>
-            <h5 class="card-title">Select number of cards</h5>
-            <div class="form-group">
-              <select class="form-control w-25" id="select-cards_num">
-                <option value="">--Select your option--</option>
-                <option value="4">4</option>
-                <option value="8">8</option>
-                <option value="12">12</option>
-              </select>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img src="./images/soft-skills.jpg" width="100%" alt="" />
+          </div>
+          <div class="col position-relative">
+            <div class="card pt-5 text-dark">
+              <div class="card-body">
+                <p class="card-text mb-1">Test your memory.</p>
+                <p class="card-text">
+                  Choose the difficulty of the game. and click on the "Start The
+                  Game" button
+                </p>
+                <h5 class="card-title">Select number of cards</h5>
+                <div class="form-group">
+                  <select class="form-control w-75" id="select-cards_num">
+                    <option value="">--Select your option--</option>
+                    <option value="4">4 (Easy)</option>
+                    <option value="8">8 (Intermediate)</option>
+                    <option value="12">12 (Hard)</option>
+                  </select>
+                </div>
+                <button class="btn mt-3 disabled" id="start-btn">
+                  Start The Game
+                </button>
+              </div>
             </div>
-            <button class="btn mt-3 btn-primary disabled" id="start-btn">
-              Start The Game
-            </button>
           </div>
         </div>
       </div>
 
       <!-- Cards Container -->
       <div
-        class="container mt-5 mx-auto text-start pt-2 d-none"
+        class="container mycontainer mt-5 mx-auto text-start pt-2 d-none"
         id="cards-container"
       >
         <div class="row">
           <div class="col-9">
             <p class="mb-1">
-              -Memorize the cards, and click the Play button when you are ready.
+              -Memorize the cards and click the Play button when you are ready.
             </p>
             <p class="mb-1">-After you click Play the cards will flip.</p>
             <p>-Try to pick the cards in ascending order.</p>
           </div>
           <div class="col-3 text-end" id="more-cards">
-            <button class="btn btn-primary text-white">More Cards</button>
+            <button class="btn text-white">Change Difficulty</button>
           </div>
         </div>
 
@@ -69,7 +79,8 @@
         <div class="alert alert-danger d-none" role="alert" id="loser">
           The order is incorrect. Try again.
         </div>
-        <button class="btn btn-primary m-3" id="play-btn">Play</button>
+        <button class="btn m-3" id="play-btn">Play</button>
+        <button class="btn m-3 d-none" id="play-new-game">New Game</button>
       </div>
     </div>
 

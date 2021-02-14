@@ -1,10 +1,24 @@
 .main-container {
   min-height: 100vh;
-  color: white;
+  /* color: white; */
+}
+
+.mycontainer {
+  background-color: #fae0f2;
 }
 
 .card {
-  background: #3b4c5a;
+  box-shadow: 2px 2px 10px #0000002a;
+  background-color: #ffffff;
+  width: 90%;
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.myrow {
+  background-color: #ffffff;
 }
 
 .mycard-container {
@@ -43,13 +57,19 @@
 }
 
 .back {
-  background-color: #2980b9;
+  background-color: #217788;
   color: white;
   transform: rotateY(180deg);
 }
 
 .rotate {
   transform: rotateY(180deg);
+}
+
+.btn,
+.btn:hover {
+  background-color: #3cc4df;
+  color: #ffffff;
 }
 
 @media (max-width: 1200px) {
@@ -73,6 +93,14 @@
 @media (max-width: 768px) {
   .mycard-container {
     height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 75%;
+    top: -20px;
+    height: 100%;
   }
 }
 
