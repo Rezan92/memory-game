@@ -1,4 +1,6 @@
-import e from "express";
+const generateRandomNum = (min, max) => {
+  return Math.round(Math.random() * (max - min) + min);
+};
 
 const getRandomNums = (req, res) => {
   let { numOfCards } = req.body;
@@ -8,10 +10,6 @@ const getRandomNums = (req, res) => {
   } else if (numOfCards < 4) {
     numOfCards = 4;
   }
-
-  const generateRandomNum = (min, max) => {
-    return Math.round(Math.random() * (max - min) + min);
-  };
 
   const cardNums = [];
 

@@ -62,6 +62,8 @@ const app = () => {
           </div>`;
     });
 
+    allCards.sort((a, b) => a - b);
+
     addClass(selectCardsContainer, "d-none");
     removeClass(selectCardsContainer, "d-block");
     removeClass(cardsContainer, "d-none");
@@ -104,15 +106,13 @@ const app = () => {
 
     selectedCardsByUser.push(number);
 
-    allCards.sort((a, b) => a - b);
-
     element.removeEventListener("click", flipCardBack);
 
     if (selectedCardsByUser.indexOf(number) === allCards.indexOf(number)) {
-      element.firstElementChild.classList.remove("bg-danger");
+      removeClass(element.firstElementChild, "bg-danger");
       addClass(element.firstElementChild, "bg-success");
     } else {
-      element.firstElementChild.classList.remove("bg-success");
+      removeClass(element.firstElementChild, "bg-success");
       addClass(element.firstElementChild, "bg-danger");
       playBtn.textContent = "Try Again";
     }
